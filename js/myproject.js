@@ -156,13 +156,13 @@ function getDistanceTime() {
   let distanceDay = Math.floor(   distance / (milisecond * secondInHours * hoursInDays));
 
   if (distanceYears > 0){
-    return `Created from ${distanceYears} Year ${distanceMonths} Months ${distanceWeek} weeks ${distanceDay} days ago `;
+    return `Created since ${distanceYears} Year ${distanceMonths} Months ${distanceWeek} weeks ${distanceDay} days ago `;
   } else if (distanceMonths> 0){
-    return `Created from ${distanceMonths} Month ${distanceWeek} weeks  ${distanceDay} days ago`;
+    return `Created since ${distanceMonths} Month ${distanceWeek} weeks  ${distanceDay} days ago`;
   } else if (distanceWeek > 0){
-    return `Created from ${distanceWeek} week ${distanceDay} days ago`;
+    return `Created since ${distanceWeek} week ${distanceDay} days ago`;
   } else  if (distanceDay > 0){
-    return `Created from ${distanceDay} day ago`;
+    return `Created since ${distanceDay} day ago`;
   }
   
   // next buat pengkondisian dimana jika waktunya jamak akan dibuat kaya weeks/years/days sementara jika tidak ya engga 
