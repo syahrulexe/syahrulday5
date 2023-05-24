@@ -1,6 +1,8 @@
 <html>
     <head>
         <title>Add Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/myproject.css">
         <link
@@ -18,18 +20,36 @@
                 <li>
                   <img src="assets/images/logo.png" alt="dumbways_logo" />
                 </li>
-                <li>
-                  <a href="index.html">Home</a>
+                <li class="item-collapse">
+                  <a class="active" href="index.html">Home</a>
                 </li>
-                <li>
-                  <a class="active" href="myproject.html">My Project</a>
+                <li class="item-collapse">
+                  <a href="myproject.html">My Project</a>
                 </li>
               </ul>
             </div>
-            <div class="nav-right">
-              <a class="#" href="contact.html">Contact Me</a>
+            <div class="nav-right item-collapse">
+              <a href="contact.html">Contact Me</a>
             </div>
-          </nav>
+      
+            <!-- adding bars menu (mobile view only) -->
+            <div class="nav-right" id="barsmenu">
+              <button
+                style="background-color: transparent; border: none; cursor: pointer"
+                onclick="openHamburger()"
+              >
+                <i class="fa-2x fa-solid fa-bars"></i>
+              </button>
+            </div>
+        </nav>
+          <!-- bar menu on mobile view -->
+        <div class="hamburger-nav-container" id="hamburger-nav-container">
+          <a href="index.html">Home</a>
+          <a href="myproject.html" class="hamburger-active">My Project</a>
+          <a href="contact.html">Contact Me</a>
+        </div>
+      
+        <script src="js/index.js"></script>
           
         <div class="project">
             <div class="project-form">
@@ -91,8 +111,19 @@
                                 <input type="file" id="input-project-image" hidden />
                             </div>
                         </div>
-                        <div class="button-group">
-                            <button>Submit</button>
+                        <div class="button-submit">
+                            <button style="
+                            background-color: rgb(0, 16, 49);
+                            color: white;
+                            padding: 6px 25px;
+                            border: none;
+                            border-radius: 20px;
+                            margin: 0;
+                            font-size: 20px;
+                            font-weight: 700;
+                            margin-top: 30px;
+                                
+                                ">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -100,9 +131,13 @@
 
             <!-- halaman bawah p2 -->
 
+            <div>
+                <h1>YEAAAAHHHHHHH</h1>
+            </div>
             <div class="project-result">
-                <h1>projek avaible</h1>
-                <div  id="contents"  class="card-container">
+                
+                <div id="contents"  class="card-container">
+                    
                     <div class="card">
                         <img src="assets/project images/bmth.jpg" alt="bmth">
                         <h4 class="title"><a href="detailproject.html">adsa</a></h4>
@@ -112,11 +147,41 @@
                         <i class="fa-brands fa-css3-alt"></i>
                         <i class="fa-brands fa-html5"></i>
                         <i class="fa-brands fa-js"></i>
-                        <div class="button-edit">
+                        <div class="button-group">
                             <button>edit</button>
                             <button>delete</button>
                         </div> 
                     </div>
+                    <div class="card">
+                        <img src="assets/project images/bmth.jpg" alt="bmth">
+                        <h4 class="title"><a href="detailproject.html">adsa</a></h4>
+                        <p class="time">durasi : 3 bulan</p>
+                        <p class="about">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, earum.</p>
+                        <i class="fa-brands fa-java"></i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-html5"></i>
+                        <i class="fa-brands fa-js"></i>
+                        <div class="button-group">
+                            <button>edit</button>
+                            <button>delete</button>
+                        </div> 
+                    </div>
+                    <div class="card">
+                        <img src="assets/project images/bmth.jpg" alt="bmth">
+                        <h4 class="title"><a href="detailproject.html">adsa</a></h4>
+                        <p class="time">durasi : 3 bulan</p>
+                        <p class="about">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, earum.</p>
+                        <i class="fa-brands fa-java"></i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-html5"></i>
+                        <i class="fa-brands fa-js"></i>
+                        <div class="button-group">
+                            <button>edit</button>
+                            <button>delete</button>
+                        </div> 
+                    </div>
+                    
+                        
                     
                 </div>
             </div>

@@ -1,7 +1,16 @@
 <html>
   <head>
     <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="css/contact.css" />
+    <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
   </head>
 
   <body>
@@ -11,18 +20,36 @@
           <li>
             <img src="assets/images/logo.png" alt="dumbways_logo" />
           </li>
-          <li>
-            <a href="index.html">Home</a>
+          <li class="item-collapse">
+            <a class="active" href="index.html">Home</a>
           </li>
-          <li>
+          <li class="item-collapse">
             <a href="myproject.html">My Project</a>
           </li>
         </ul>
       </div>
-      <div class="nav-right">
-        <a class="active" href="contact.html">Contact Me</a>
+      <div class="nav-right item-collapse">
+        <a href="contact.html">Contact Me</a>
       </div>
-    </nav>
+
+      <!-- adding bars menu (mobile view only) -->
+      <div class="nav-right" id="barsmenu">
+        <button
+          style="background-color: transparent; border: none; cursor: pointer"
+          onclick="openHamburger()"
+        >
+          <i class="fa-2x fa-solid fa-bars"></i>
+        </button>
+      </div>
+  </nav>
+    <!-- bar menu on mobile view -->
+  <div class="hamburger-nav-container" id="hamburger-nav-container">
+    <a href="index.html">Home</a>
+    <a href="myproject.html">My Project</a>
+    <a href="contact.html" class="hamburger-active">Contact Me</a>
+  </div>
+
+  <script src="js/index.js"></script>
 
     <h1>Isi Aja</h1>
     <form>
@@ -56,7 +83,7 @@
         <textarea id="input-message" rows="5" cols="10"></textarea>
       </div>
 
-      <div class="container">
+      <div class="container-button">
         <button type="button" onclick="submitData()">Submit</button>
       </div>
     </form>

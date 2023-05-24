@@ -25,7 +25,6 @@ function addProject(event){
         return alert("masukin file gambar");
       } 
     
-      
 
     image = URL.createObjectURL(image[0]);
     console.log(image);
@@ -84,7 +83,7 @@ function renderProject() {
           ${dataProject[i].checkboxCss}
           ${dataProject[i].checkboxJavascript}
           ${dataProject[i].checkboxJava}
-          <div class="button-edit">
+          <div class="button-group">
             <button>edit</button>
             <button>delete</button>
           </div> 
@@ -156,13 +155,13 @@ function getDistanceTime() {
   let distanceDay = Math.floor(   distance / (milisecond * secondInHours * hoursInDays));
 
   if (distanceYears > 0){
-    return `Created since ${distanceYears} Year ${distanceMonths} Months ${distanceWeek} weeks ${distanceDay} days ago `;
+    return `Created since ${distanceYears} Year `;
   } else if (distanceMonths> 0){
-    return `Created since ${distanceMonths} Month ${distanceWeek} weeks  ${distanceDay} days ago`;
+    return `Created since ${distanceMonths} Months`;
   } else if (distanceWeek > 0){
-    return `Created since ${distanceWeek} week ${distanceDay} days ago`;
+    return `Created since ${distanceWeek} weeks`;
   } else  if (distanceDay > 0){
-    return `Created since ${distanceDay} day ago`;
+    return `Created since ${distanceDay} days`;
   }
   
   // next buat pengkondisian dimana jika waktunya jamak akan dibuat kaya weeks/years/days sementara jika tidak ya engga 
